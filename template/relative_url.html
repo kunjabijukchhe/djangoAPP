@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+  <h1>Please Login</h1>
+  <form action="{% url 'reviseApp:user_login' %}" method="post">
+    {% csrf_token%}
+    <label for="username">Username:</label>
+    <input type="username" name="username" placeholder="Username">
+    <label for="username">Password:</label>
+    <input type="password" name="password">
+    <input type="submit" name="" value="Login">
+
+  </form>
+</div>
+{% endblock%}
